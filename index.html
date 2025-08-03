@@ -2,22 +2,10 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Test Webhook</title>
+  <title>Redirect test</title>
+  <meta http-equiv="refresh" content="0; url=https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e/?visited=true" />
 </head>
 <body>
-  <h1>Test Webhook</h1>
-  <p>Se vedi questa pagina, il file è stato caricato.</p>
-
-  <!-- Immagine nascosta che richiama il webhook -->
-  <img src="https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e/pixel" style="display:none" alt="">
-
-  <!-- Prova con JavaScript molto semplice -->
-  <script>
-    // Facciamo un semplice fetch e vediamo se arriva la richiesta
-    fetch('https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e?test=ok')
-      .catch(() => {
-        // Ignora errori, può darsi che blocchi CORS o altro
-      });
-  </script>
+  <p>Se non vieni reindirizzato, clicca <a href="https://webhook.site/40aa731a-a2c1-447f-bc06-aae282f1b26e/?visited=true">qui</a>.</p>
 </body>
 </html>
